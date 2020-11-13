@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
 
 import Sidebar from "../components/Sidebar";
@@ -30,7 +30,7 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <Router>
+      <HashRouter basename="/">
         <div className={this.state.className} id="wrapper">
           <Sidebar />
           <div id="page-content-wrapper">
@@ -92,7 +92,7 @@ class Layout extends React.Component {
             </Container>
           </div>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
